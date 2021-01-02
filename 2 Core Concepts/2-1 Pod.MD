@@ -1,6 +1,5 @@
 # Pod 
-<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/pod-256.png?raw=true" width="50
-">
+<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/pod-256.png?raw=true" width="50">
 
 ## What is Pod?
 - Pods are the smallest deployable units in Kubernetes.
@@ -27,7 +26,7 @@
 ## What is Pod templates?
 Workload resources create Pods from a pod template and manage those Pods  
 ```
-apiVersion: batch/v1  
+apiVersion: apps/v1  
 kind: Job
 metadata:
   name: hello
