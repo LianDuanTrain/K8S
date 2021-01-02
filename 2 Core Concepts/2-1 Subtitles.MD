@@ -1,5 +1,7 @@
-Welcome to our class. Today we will Overview Kubernetes
-
+Welcome to our class. Today we learn K8s Pod. There are three topics.
+ What is Pod?
+ How to use Pod?
+ What is Pod templates?
 
 # Pod 
 <image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/pod-256.png?raw=true" width="50
