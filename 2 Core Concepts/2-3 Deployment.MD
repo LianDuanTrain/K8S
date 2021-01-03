@@ -2,9 +2,7 @@
 <image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/deploy-256.png?raw=true" width="50">  
 
 ## What is Deployment?  
-- A Deployment provides declarative updates for Pods and ReplicaSets.
-- Deployment provides a management method for Pod and ReplicaSet. 
-- Each Deployment corresponds to a deployment in the cluster.  
+- Deployment provides a management method for Pod and ReplicaSet.  
   
 ## How to create Deployment?
 -  `kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml` 
@@ -42,9 +40,9 @@ spec:
    -  `kubectl run nginx-deployment --image=nginx:1.14.2 --port=80 --replicas=3 `    
 
 ## What is trigger of Deployment Controller?
-- Deployment Changes 
+- Deployment changes 
 - ReplicaSet changes related to Deployment
-- When the number of Pods related to Deployment is 0, the Pod deletion event
+- When the number of Pods related to Deployment is 0, the Pod deletion event triage
 
 ## How to rollling update?
 ### Init  
