@@ -1,5 +1,4 @@
-# Secrets
-<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/secret-256.png?raw=true" width="50">  
+Welcome to our class. Today we will learn Secrets.
 
 ## What is Secrets?
 Kubernetes Secrets store and manage sensitive information.
@@ -7,7 +6,7 @@ Kubernetes Secrets store and manage sensitive information.
 - OAuth tokens
 - SSH keys
 
-## How to create Secrets?
+## I can create Secrets in two ways
 ```
 kubectl create secret generic dev-db-secret \
   --from-literal=username=devuser \
@@ -24,5 +23,9 @@ data:
   password: MWYyZDFlMmU2N2Rm
 ```
 
+####################################################################
+Today we leaned Kubernetes core concepts - secret and create the secret in two ways..
 
-https://kubernetes.io/docs/concepts/configuration/secret/
+Thank you for watching, see you in the next class.
+
+
