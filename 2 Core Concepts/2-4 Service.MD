@@ -9,10 +9,10 @@
   - LoadBalancer
   - ExternalName
 ## Why need service?
-- Service discovery without modify your application 
-  -  Service - environment variables 
+- Service discovery without modify application 
+  -  Environment variables 
   -  DNS
-- Access point of group of pods
+- Access point for group of pods
 - Load-balance across
   -  rr: round-robin(default)
   -  lc: least connection (smallest number of open connections)
