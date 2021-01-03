@@ -1,6 +1,28 @@
 # Secrets
-Kubernetes Secrets let you store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys. Storing confidential information in a Secret is safer and more flexible than putting it verbatim in a Pod definition or in a container image. See Secrets design document for more information.
+<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/secret-256.png?raw=true" width="50">  
 
-A Secret is an object that contains a small amount of sensitive data such as a password, a token, or a key. Such information might otherwise be put in a Pod specification or in an image. Users can create Secrets and the system also creates some Secrets
-<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/secret-256.png?raw=true" width="100">
+## What is Secrets?
+Kubernetes Secrets let you store and manage sensitive information.
+- Passwords
+- OAuth tokens
+- SSH keys
+
+## How to create Secrets?
+```
+kubectl create secret generic dev-db-secret \
+  --from-literal=username=devuser \
+  --from-literal=password='S!B\*d$zDsb='
+```
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  username: YWRtaW4=
+  password: MWYyZDFlMmU2N2Rm
+```
+
+
 https://kubernetes.io/docs/concepts/configuration/secret/

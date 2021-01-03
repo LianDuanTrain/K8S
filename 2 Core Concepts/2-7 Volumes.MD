@@ -1,6 +1,20 @@
 # Volumes
-On-disk files in a container are ephemeral, which presents some problems for non-trivial applications when running in containers. One problem is the loss of files when a container crashes. The kubelet restarts the container but with a clean state. A second problem occurs when sharing files between containers running together in a Pod. The Kubernetes volume abstraction solves both of these problems. Familiarity with Pods is suggested.
+<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/vol-256.png?raw=true" width="50">
+
+## What is Volumes?
+Volume is just a directory, possibly with some data in it, which is accessible to the containers in a pod. How that directory comes to be, the medium that backs it, and the contents of it are determined by the particular volume type used.
+
+- Persistent data
+- Share data between Pods
+
+## Which types of Volumes?
+- Local
+- iscsi
+- NFS
+- Cloud
+ - AWS
+ - AZURE
+ - etc
 
 https://kubernetes.io/docs/concepts/storage/volumes/
 
-<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/vol-256.png?raw=true" width="100">
