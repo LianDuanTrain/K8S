@@ -37,7 +37,12 @@ spec:
       port: 80
       targetPort: 9376
 ```
-
+####################################################################
+Today we leaned Kubernetes core concepts - service.
+Service definition and four service types
+Main service functions
+Service Load-balance types
+How to create a service via yaml file.
 
 Thank you for watching, see you in the next class.
 
