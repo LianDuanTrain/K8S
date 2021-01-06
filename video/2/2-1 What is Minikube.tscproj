@@ -4202,7 +4202,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "Run Your First Docker",
+                              "text" : "What is Minikube?",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -4219,7 +4219,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontItalic","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":21,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":21,"rangeStart":0,"value":700,"valueType":"int"},{"name":"kerning","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":21,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"underline","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":21,"rangeStart":0,"value":96,"valueType":"double"},{"name":"strikethrough","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"underline","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":17,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":17,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fontItalic","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":17,"rangeStart":0,"value":700,"valueType":"int"},{"name":"fgColor","rangeEnd":17,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"kerning","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"double"},{"name":"strikethrough","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -4324,7 +4324,11 @@
                             "mediaDuration" : 103,
                             "scalar" : 1,
                             "metadata" : {
-                              "clipSpeedAttribute" : false
+                              "clipSpeedAttribute" : false,
+                              "default-HAlign" : "center",
+                              "default-LineSpace" : 0.0,
+                              "default-VAlign" : "center",
+                              "default-text-attributes" : "[{\"name\":\"fontItalic\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontName\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"fontWeight\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":700,\"valueType\":\"int\"},{\"name\":\"kerning\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"double\"},{\"name\":\"fgColor\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":\"(50,108,229,255)\",\"valueType\":\"color\"},{\"name\":\"underline\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontSize\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":96,\"valueType\":\"double\"},{\"name\":\"strikethrough\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"}]"
                             },
                             "animationTracks" : {
 
@@ -4343,7 +4347,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "Run Your First Docker",
+                              "text" : "What is Minikube?",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -4360,7 +4364,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"strikethrough","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":21,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":21,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fontWeight","rangeEnd":21,"rangeStart":0,"value":700,"valueType":"int"},{"name":"fgColor","rangeEnd":21,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"underline","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fgColor","rangeEnd":17,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"fontSize","rangeEnd":17,"rangeStart":0,"value":96,"valueType":"double"},{"name":"underline","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":17,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":17,"rangeStart":0,"value":700,"valueType":"int"},{"name":"strikethrough","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -4465,7 +4469,11 @@
                             "mediaDuration" : 97,
                             "scalar" : 1,
                             "metadata" : {
-                              "clipSpeedAttribute" : false
+                              "clipSpeedAttribute" : false,
+                              "default-HAlign" : "center",
+                              "default-LineSpace" : 0.0,
+                              "default-VAlign" : "center",
+                              "default-text-attributes" : "[{\"name\":\"strikethrough\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontName\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"fontSize\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":96,\"valueType\":\"double\"},{\"name\":\"fontWeight\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":700,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":\"(50,108,229,255)\",\"valueType\":\"color\"},{\"name\":\"underline\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"kerning\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"double\"},{\"name\":\"fontItalic\",\"rangeEnd\":21,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"}]"
                             },
                             "animationTracks" : {
 
