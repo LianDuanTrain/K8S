@@ -16,7 +16,7 @@ Welcome to our class. Today we learn K8s Pod. There are three topics.
 - Shared resources for containers
   - Containers can share Storage, such as volume
   - Networking, as a unique cluster IP address. container access each other via localhost
-  - Information about how to run each container. such as the container image version or specific ports to use.
+  - Pod has information about how to run each container. such as the container image version or specific ports to use, etc.
 
 <div style="background-color: lightgray;"><img  src ='https://d33wubrfki0l68.cloudfront.net/fe03f68d8ede9815184852ca2a4fd30325e5d15a/98064/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg' ></div>
 
@@ -28,22 +28,41 @@ Welcome to our class. Today we learn K8s Pod. There are three topics.
    - StatefulSet
    - DaemonSet
 
+### Let me creatye a pod use nginx image.
+- `kubectl create deployment mynginx --image=nginx:1.19-alpine`
+- How to get pod infomatation? run kubectl get pod   
+- If I want to get more detail, add flages ,  `kubectl get pod -o wide`
+
+https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
+
+NOMINATED NODE
+When Pods are created, they go to a queue and wait to be scheduled. 
+The scheduler picks a Pod from the queue and tries to schedule it on a Node. 
+If no Node is found that satisfies all the specified requirements of the Pod, preemption logic is triggered for the pending Pod. 
+
+READINESS GATES
+FEATURE STATE: Kubernetes v1.14 [stable]
+Your application can inject extra feedback or signals into PodStatus: Pod readiness. 
+
+
+
 ## What is Pod templates?
-Workload resources create Pods from a pod template and manage those Pods  
+Workload resources create Pods from a pod template and manage those Pods.
+In the previous session, I showed how to use commander to credit deployment.
+In the working environment, the YAML file is used to credit deployment Resource because the command line  hard to Tracking in the source version control system
+
 ```
-apiVersion: batch/v1  
-kind: Job
+apiVersion: apps/v1  
+kind: Deployment
 metadata:
-  name: hello
+  name: mynginx
 spec:
   template:
-    # This is the pod template
+    # This is the pod template start
     spec:
       containers:
-      - name: hello
-        image: busybox
-        command: ['sh', '-c', 'echo "Hello, Kubernetes!" && sleep 3600']
-      restartPolicy: OnFailure
+      - name: mynginx
+        image: nginx:1.19-alpine
     # The pod template ends here
 ```
 

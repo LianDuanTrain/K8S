@@ -10,8 +10,10 @@
   - Storage
   - Networking, as a unique cluster IP address
   - Information about how to run each container
+ 
+<div style="background-color: lightgray;"><img  src ='https://d33wubrfki0l68.cloudfront.net/fe03f68d8ede9815184852ca2a4fd30325e5d15a/98064/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg' ></div> 
 
-<div style="background-color: lightgray;"><img  src ='https://d33wubrfki0l68.cloudfront.net/fe03f68d8ede9815184852ca2a4fd30325e5d15a/98064/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg' ></div>
+  
 
 ## How to use Pod?
 - Pods run a single container  
@@ -21,24 +23,27 @@
    - StatefulSet
    - DaemonSet
 
-
+### Demo
+- `kubectl create deployment mynginx --image=nginx:1.19-alpine`
+   -  https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create 
+- `kubectl get pod`   
+- `kubectl get pod -o wide`
+- kubectl [command] [TYPE] [NAME] [flags]
 
 ## What is Pod templates?
 Workload resources create Pods from a pod template and manage those Pods  
 ```
 apiVersion: apps/v1  
-kind: Job
+kind: Deployment
 metadata:
-  name: hello
+  name: mynginx
 spec:
   template:
-    # This is the pod template
+    # This is the pod template start
     spec:
       containers:
-      - name: hello
-        image: busybox
-        command: ['sh', '-c', 'echo "Hello, Kubernetes!" && sleep 3600']
-      restartPolicy: OnFailure
+      - name: mynginx
+        image: nginx:1.19-alpine
     # The pod template ends here
 ```
 
