@@ -30,7 +30,7 @@
 - `kubectl get pod -o wide`
 - kubectl [command] [TYPE] [NAME] [flags]
 
-## What is Pod templates?
+## What is Pod template?
 Workload resources create Pods from a pod template and manage those Pods  
 ```
 apiVersion: apps/v1  

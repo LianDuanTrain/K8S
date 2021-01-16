@@ -1,4 +1,4 @@
-Welcome to our class. Today we learn K8s Pod. There are three topics.
+Welcome to our class. Today we'll learn K8s Pod. There are three topics.
  What is Pod?
  How to use Pod?
  What is Pod templates?
