@@ -1,10 +1,13 @@
 Welcome to our class. Today we fource on ReplicaSet.
-
+ What is ReplicaSet?
+ How a ReplicaSet works?
+ When  using a ReplicaSet?
 
 <image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/rs-256.png?raw=true" width="50">  
 
 ## What is ReplicaSet?
-- A ReplicaSet purpose is creating and deleting Pods as needed to reach the desired number.  Also called Self-healing.
+- A ReplicaSet purpose is creating and deleting Pods as needed to reach the desired number.  Also called Self-healing
+- .
 - When a ReplicaSet needs to create new Pods, it uses its Pod template.
   ReplicaSet implement by Replicaset Controller is a daemon that runs in never ending loop.
 
