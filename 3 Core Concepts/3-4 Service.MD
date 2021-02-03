@@ -25,17 +25,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: springbootdemo
 spec:
   selector:
-    app: MyApp
+    app: springbootdemo
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 9376
+      port: 9999
+      targetPort: 9999
 ```
+Access Service  
+`kubectl get pods`  
+`kubectl  logs springbootdemo-deployment-94658b785-4xjsd`   
+`kubectl port-forward service/springbootdemo 9999:9999`   
+`curl 127.0.0.1:9999`  
 
-
-With Kubernetes you don't need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives Pods their own IP addresses and a single DNS name for a set of Pods, and can load-balance across them.
-https://kubernetes.io/docs/concepts/services-networking/service/
 
