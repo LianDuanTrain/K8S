@@ -13,13 +13,7 @@
   -  Environment variables 
   -  DNS
 - Access point for group of pods
-- Load-balance across
-  -  rr: round-robin(default)
-  -  lc: least connection (smallest number of open connections)
-  -  dh: destination hashing
-  -  sh: source hashing
-  -  sed: shortest expected delay
-  -  nq: never queue
+
 ## How to create a Service?
 ```
 apiVersion: v1
@@ -34,7 +28,7 @@ spec:
       port: 9999
       targetPort: 9999
 ```
-Access Service  
+### Access Service  
 `kubectl get pods`  
 `kubectl  logs springbootdemo-deployment-94658b785-4xjsd`   
 `kubectl port-forward service/springbootdemo 9999:9999`   

@@ -12,7 +12,7 @@ Welcome to our class. Today we will learn
   - ExternalName, expose server via DNS name.
   
 ## Why need service?
-- K8s provide Service discovery function without modify application. The server  registry doe not need. The servers are able to access eacth other via service name. There are two ways.  
+- K8s provide Service discovery function without modify application. The server  registry does not need. The servers are able to access eacth other via service name. There are two ways.  
   -  environment variables 
   -  DNS
 - Pods are nonpermanent resources. Each Pod gets its own IP address so need a access point for group of pods.
