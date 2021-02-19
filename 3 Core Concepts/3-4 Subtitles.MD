@@ -16,13 +16,7 @@ Welcome to our class. Today we will learn
   -  environment variables 
   -  DNS
 - Pods are nonpermanent resources. Each Pod gets its own IP address so need a access point for group of pods.
-- service implemant Load-balance across, the typs are below:
-  -  rr: round-robin(default)
-  -  lc: least connection (smallest number of open connections)
-  -  dh: destination hashing - smallest number of open connections
-  -  sh: source hashing
-  -  sed: shortest expected delay
-  -  nq: never queue
+
 ## How to create a Service?
 ```
 apiVersion: v1
