@@ -52,7 +52,7 @@ spec:
 
 ## How to scale deployment? 
 
-- `kubectl scale deployment/springbootdemo-deployment --replicas=3 -record=true`
+- `kubectl scale deployment/springbootdemo-deployment --replicas=3 --record=true`
 - After 1.18.0    
   ~~kubectl run --generator=deployment/v1 springbootdemo-deployment --image=lianduantraining/springbootdemo:v1 --port=9999 --replicas=3~~ 
   
