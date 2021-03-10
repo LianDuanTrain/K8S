@@ -4,7 +4,7 @@
 ## What is ConfigMap? 
 - A ConfigMap is an API object used to store non-confidential data in key-value pairs. 
 - A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable.
-## How to inject the configuration item of the application in K8S?
+## How to use ConfigMap?
 There are four  ways, I  can use a ConfigMap to configure a container inside a Pod:
 - Inside a container command and args
 - Environment variables for a container, Environment variables do not support change value on fly.
@@ -143,10 +143,6 @@ verify env parameters
 
 ####################################################################
 Today we leaned Kubernetes core concepts - ConfigMap.
-
-What is ConfigMap?
-How to inject the configuration item of the application in K8S?
-How to create a ConfigMap?
 What is ConfigMap
 
 Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.

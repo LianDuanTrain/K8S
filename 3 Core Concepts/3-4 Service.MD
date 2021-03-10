@@ -68,7 +68,7 @@ spec:
 - Service discovery without modify application 
   -  Environment variables
      - `kubectl get pods`   
-     - `kubectl exec -it --rm springbootdemo-deployment-XXX -- env`  
+     - `kubectl exec -it  springbootdemo-deployment-XXX -- env`  
   -  DNS
      - busybox
        - `kubectl run  -it busybox --rm --image=busybox:1.28.4 --restart=Never -- sh`

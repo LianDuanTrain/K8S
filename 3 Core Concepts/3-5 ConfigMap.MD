@@ -1,17 +1,17 @@
 
 
-# ConfigMaps
+# ConfigMap
   <image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/cm-256.png?raw=true" width="50"/>
 
 ## Topics         
 - What is ConfigMap? 
-- How to use ConfigMap?
+- How to inject the configuration item of the application in K8S?
 - How to create a ConfigMap?
 
 ### What is ConfigMap? 
 - An API object used to store non-confidential data in key-value pairs. 
 - Decouple environment-specific configuration from container images.
-### How to use ConfigMap?
+### How to inject the configuration item of the application in K8S?
 There are four different ways.
 - Inside a container command and args
 - Environment variables for a container
