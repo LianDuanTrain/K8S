@@ -12,7 +12,7 @@
 - An API object used to store non-confidential data in key-value pairs. 
 - Decouple environment-specific configuration from container images.
 ### How to use ConfigMap?
-There are four different ways that can use a ConfigMap to configure a container inside a Pod:
+There are four different ways.
 - Inside a container command and args
 - Environment variables for a container
 - Add a file in read-only volume, for the application to read
@@ -130,9 +130,7 @@ spec:
 `kubectl get ConfigMap envconfig -o yaml`  
 `kubectl get pod`  
 `kubectl exec -it busybox-deployment-XXX -- env `
-`kubectl edit configmap envconfig` 
-`kubectl exec -it busybox-deployment-XXX -- sh ` 
-`kubectl delete -f configmap-env-variable.yaml` 
 
-https://kubernetes.io/docs/concepts/configuration/configmap/
+
+
 
