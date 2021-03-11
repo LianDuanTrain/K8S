@@ -8,6 +8,11 @@ The master components.
 - Scheduler
 - Etcd
 
+
+
+
+
+
 ## Nodes
 The node components run on every cluster node. 
 - Container Runtime
