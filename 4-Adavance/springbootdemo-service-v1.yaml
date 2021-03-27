@@ -1,3 +1,15 @@
+# Secrets
+apiVersion: v1
+kind: Secret
+metadata:
+  name: key-value-secret
+type: Opaque 
+data:
+# echo  'lian' | base64
+# echo  '123' | base64
+  username: bGlhbgo=
+  password: MTIzCg==
+---
 # Config Map
 apiVersion: v1
 kind: ConfigMap
@@ -34,6 +46,17 @@ spec:
         envFrom:
           - configMapRef:
               name: envconfig
+        env:
+            - name: SECRET_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: key-value-secret
+                  key: username
+            - name: SECRET_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: key-value-secret
+                  key: password            
         ports:
         - containerPort: 9999
 # template end 
