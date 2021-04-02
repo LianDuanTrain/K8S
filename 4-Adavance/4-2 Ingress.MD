@@ -3,7 +3,7 @@
 - Four ways exposing applications deployed in Kubernetes 
 - What is Kubernetes Ingress?
 - What is the Ingress Controller?
-- How to Use Nginx Ingress Controller?
+- How to create a Ingress?
 ### Four ways exposing applications deployed in Kubernetes
 - Ingress 
 - ClusterIP
