@@ -1,15 +1,30 @@
-## Topics         
-- 
+# Dashboard  
+Topic: 
+- What is Dashboard?
+- Demo Dashboard  
 
-# Dashboard
-- Web-based Kubernetes user interface
-- Deploys with a minimal RBAC configuration by default 
-- Supports logging in with a Bearer Token
-Installing the Kubernetes Metrics Server 
-The Kubernetes Metrics Server is an aggregator of resource usage data in K8S (Minikube)      
-- `minikube addons enable metrics-server`
-- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/3-Core-Concepts/springbootdemo-service-v1.yaml`  
-# Using Dashboard
+## What is Dashboard?  
+- In previous classes, we learned pod, replicaset, deployment,  service, configmap, and secrets.
+- I did above resources   via command line interface kubectl in live demo.    
+- K8s privode Web-based user interface, K8s Dashboard to magaer all resource.   
+- Dashboard deploys with a minimal RBAC configuration by default
+- Dashboard Supports logging in with a Bearer Token, in minikube user proxy open a dashboard in your def brower.
+  
+## Demo Dashboard
+let me start demo, 
+first, check minikube addons
+seconds, enable metrics-server - is an aggregator of resource usage data in K8S
+And then, restart minikube
+Next, create we learned k8s resource - pod, replicaset, deployment,  service, configmap, and secrets
+Latest, start dashboard.
+
+
+### Dashboard UI
+the UI has three parts
+top: namespace select
+left: navigation menu
+right: resource content  
+
 - Navigation
 - Admin Overview
 - Workloads

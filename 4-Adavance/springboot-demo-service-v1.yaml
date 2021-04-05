@@ -1,0 +1,74 @@
+# Secrets
+apiVersion: v1
+kind: Secret
+metadata:
+  name: key-value-secret
+type: Opaque 
+data:
+# echo  'lian' | base64
+# echo  '123' | base64
+  username: bGlhbgo=
+  password: MTIzCg==
+---
+# Config Map
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: envconfig
+data:
+  author: lian 
+---
+# API Version  
+apiVersion: apps/v1
+kind: Deployment
+# Deployment metadata start
+metadata:
+  name: springbootdemo-deployment
+  labels:
+    app: springbootdemo
+# Deployment metadata end
+# Pod spec start    
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springbootdemo
+# Pod spec end       
+# template start      
+  template:
+    metadata:
+      labels:
+        app: springbootdemo
+    spec:
+      containers:
+      - name: springbootdemo
+        image: lianduantraining/springbootdemo:v1
+        envFrom:
+          - configMapRef:
+              name: envconfig
+        env:
+            - name: SECRET_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: key-value-secret
+                  key: username
+            - name: SECRET_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: key-value-secret
+                  key: password            
+        ports:
+        - containerPort: 9999
+# template end 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springbootdemo
+spec:
+  selector:
+    app: springbootdemo
+  ports:
+    - protocol: TCP
+      port: 9999
+      targetPort: 9999
