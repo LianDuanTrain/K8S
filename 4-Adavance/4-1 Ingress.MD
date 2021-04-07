@@ -7,10 +7,10 @@
 - Create a Nginx Ingress
   
 ### How to expos applications in Kubernetes?
-- Traditional(Kubernetes) Load Balancing
+- Traditional Kubernetes Ingress
   - Nginx Ingress 
   - HAproxy Ingress
-- Microservice Load Balancing
+- Service Mesh
   - Traefik
   - Envoy
   - Istio 
