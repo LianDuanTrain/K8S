@@ -1,0 +1,29 @@
+# API Version
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  # Ingress Object Name 
+  name: ingress-demo
+  # Namespace 
+  namespace: k8s-training
+  # https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations
+  annotations:
+    kubernets.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/load-balance : "ewma"
+spec:
+  rules:
+   # Rule Host match  /etc/hosts
+   # host 80 443 
+    - host: springbootdemo.com
+      http:
+        paths:
+          - path: /
+            #Path types https://kubernetes.io/docs/concepts/services-networking/ingress/#path-types
+            pathType: Prefix
+            backend:
+              service:
+                name: springbootdemo
+                port:
+                  number: 9999

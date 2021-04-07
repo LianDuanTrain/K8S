@@ -1,12 +1,18 @@
+Welcome to our class. Today we will learn Secrets.
+
 # Ingress 
 ## Topics         
-- How to exposing applications in Kubernetes? 
+- How to expos applications in Kubernetes? 
 - What is Kubernetes Ingress?
 - How to create a Ingress?
-### How to exposing applications in Kubernetes?
-- Ingress
+### How to expos applications in Kubernetes?
+- Traditional(Kubernetes) Load Balancing
   - Nginx Ingress 
   - HAproxy Ingress
+- Microservice Load Balancing
+  - Traefik
+  - Envoy
+  - Istio 
 - Dev Env
   - ClusterIP
   - NodePort
@@ -28,7 +34,7 @@ https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-ingress-g
 https://kubernetes.io/docs/concepts/services-networking/ingress/
 
 
-### How to create a Ingress?
+### How to create a Nginx Ingress?
 - `minikube addons enable ingress`  
 - `minikube ip`  
 - ```sudo echo '${minikube ip} springbootdemo.com' >> /etc/hosts```
