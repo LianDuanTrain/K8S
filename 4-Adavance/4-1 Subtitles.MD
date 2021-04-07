@@ -1,23 +1,31 @@
-Welcome to our class. Today we will learn Secrets.
-
 # Ingress 
+<image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/ing-256.png?raw=true" width="50">  
+Welcome to our class. Today we will learn Secrets.
 ## Topics         
 - How to expos applications in Kubernetes? 
 - What is Kubernetes Ingress?
-- How to create a Ingress?
+- Create a Nginx Ingress
+  
 ### How to expos applications in Kubernetes?
-- Traditional(Kubernetes) Load Balancing
+
+
+- First Traditional Way (Kubernetes) Ingress
+  there are lof of Ingress inplementen in marcket, such as.
+  Ingress can redirected user access network tracket to service based on demon name. Uallly, the  Ingress has two versions, free version and pay verson. Couurande requements, you can chose. 
   - Nginx Ingress 
   - HAproxy Ingress
-- Microservice Load Balancing
+  Ingress support hot reload config file when you create new Ingress object. When you have large cluster, the hot reload will perfenerce butto nick.
+- Next , Service Mesh Way 
   - Traefik
   - Envoy
   - Istio 
-- Dev Env
-  - ClusterIP
-  - NodePort
-- Cloud provider
-  - LoadBalancer
+- And then, in Dev Env
+  - we can expose ClusterIP to access a service
+  - Or expose NodePort to access a service 
+- Finally, Cloud provider
+  - If app have static Ip, LoadBalancer is able to redirce your network tracivk to a service.
+
+
 ### What is Kubernetes Ingress?
 Kubernetes Ingress is an API object that provides routing rules to manage external users' access to the services in a Kubernetes cluster. 
 
