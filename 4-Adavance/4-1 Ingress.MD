@@ -20,16 +20,20 @@
 - Cloud provider
   - LoadBalancer
 ### What is Nginx Ingress?
-Kubernetes Ingress is an API object that provides routing rules to manage external users' access to the services in a Kubernetes cluster. 
+Kubernetes Ingress is an API object that provides routing rules to manage external users' access to the services in a Kubernetes cluster.   
+For Example:  
+springbootdemo.com => springbootdemo service 
 
-Development Types
-- DaemonSets
-- Deployments
 
-- Logic Flow   
+There are two Development Types
+- DaemonSets  
+- Deployments  
+
+Logic Flow   
 <image src ="https://www.nginx.com/wp-content/uploads/2020/04/NGINX-Plus-Ingress-Controller-1-7-0_ecosystem.png" width="70%">
 
 ### Create a Nginx Ingress
+springbootdemo.com => springbootdemo service  
 - `minikube addons enable ingress`  
 - `minikube ip`  
 - ```
