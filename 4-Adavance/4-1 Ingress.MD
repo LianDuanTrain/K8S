@@ -7,7 +7,7 @@
 - Create a Nginx Ingress
   
 ### How to expos applications in Kubernetes?
-- Traditional Kubernetes Ingress
+- Kubernetes Ingress
   - Nginx Ingress 
   - HAproxy Ingress
 - Service Mesh

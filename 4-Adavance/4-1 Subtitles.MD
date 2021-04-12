@@ -1,7 +1,7 @@
 # Ingress 
 
 <image src ="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/ing-256.png?raw=true" width="50">  
-Welcome to our class. Today we will learn Secrets.
+Welcome to our class. Today we will learn Ingress.
 ## Topics         
 - How to expos applications in Kubernetes? 
 - What is Kubernetes Ingress?
@@ -10,16 +10,22 @@ Welcome to our class. Today we will learn Secrets.
 ### How to expos applications in Kubernetes?
 
 
+
+
 - First Traditional Way (Kubernetes) Ingress
+Ingress can redirected user  network tracket to service based on demon name or demon+path. 
   there are lof of Ingress inplementen in marcket, such as.
-  Ingress can redirected user access network tracket to service based on demon name. Uallly, the  Ingress has two versions, free version and pay verson. Couurande requements, you can chose. 
-  - Nginx Ingress 
+    - Nginx Ingress 
   - HAproxy Ingress
-  Ingress support hot reload config file when you create new Ingress object. When you have large cluster, the hot reload will perfenerce butto nick.
+ Uallly, the  Ingress inplementen has two versions, free version and pay verson. Couurande requements, you can chose. 
+
+Ingress support hot reload config file when you create new Ingress object. When you have large cluster, the hot reload will perfenerce butto nick.
+
 - Next , use Service Mesh to access apps
   - Traefik
   - Envoy
   - Istio 
+  
 - And then, in Dev Env
   - we can expose ClusterIP to access a service
   - Or expose NodePort to access a service 
