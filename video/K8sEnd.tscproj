@@ -18,7 +18,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\lianduan\\Pictures\\wave1.png",
+      "src" : "D:\\Code\\K8S\\image\\wave1.png",
       "rect" : [0, 0, 1907, 383],
       "lastMod" : "20210105T163238",
       "sourceTracks" : [
@@ -41,7 +41,7 @@
     },
     {
       "id" : 2,
-      "src" : "C:\\Users\\lianduan\\Pictures\\wave2.png",
+      "src" : "D:\\Code\\K8S\\image\\wave2.png",
       "rect" : [0, 0, 1906, 341],
       "lastMod" : "20210105T163731",
       "sourceTracks" : [
@@ -64,7 +64,7 @@
     },
     {
       "id" : 3,
-      "src" : "C:\\Users\\lianduan\\Pictures\\wave3.png",
+      "src" : "D:\\Code\\K8S\\image\\wave3.png",
       "rect" : [0, 0, 1903, 380],
       "lastMod" : "20210105T163725",
       "sourceTracks" : [
@@ -87,9 +87,9 @@
     },
     {
       "id" : 4,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\infrastructure_components\\labeled\\control-plane-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\infrastructure_components\\labeled\\control-plane-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -110,9 +110,9 @@
     },
     {
       "id" : 5,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\infrastructure_components\\labeled\\etcd-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\infrastructure_components\\labeled\\etcd-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -133,9 +133,9 @@
     },
     {
       "id" : 6,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\infrastructure_components\\labeled\\node-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\infrastructure_components\\labeled\\node-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -156,9 +156,9 @@
     },
     {
       "id" : 7,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\svc-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\svc-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -179,9 +179,9 @@
     },
     {
       "id" : 8,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\ns-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\ns-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -202,9 +202,9 @@
     },
     {
       "id" : 9,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\pod-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\pod-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -225,9 +225,9 @@
     },
     {
       "id" : 10,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\secret-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\secret-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -248,9 +248,9 @@
     },
     {
       "id" : 11,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\rs-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\rs-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -271,9 +271,9 @@
     },
     {
       "id" : 12,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\vol-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\vol-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -294,9 +294,9 @@
     },
     {
       "id" : 13,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\deploy-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\deploy-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -317,9 +317,9 @@
     },
     {
       "id" : 14,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\cronjob-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\cronjob-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -340,7 +340,7 @@
     },
     {
       "id" : 15,
-      "src" : "C:\\Users\\lianduan\\Pictures\\k8sfavicon.png",
+      "src" : "D:\\Code\\K8S\\image\\k8sfavicon.png",
       "rect" : [0, 0, 512, 512],
       "lastMod" : "20210105T165021",
       "sourceTracks" : [
@@ -363,7 +363,7 @@
     },
     {
       "id" : 16,
-      "src" : "C:\\Users\\lianduan\\Videos\\4K Video Downloader\\wave.mp3",
+      "src" : "D:\\Code\\K8S\\image\\wave.mp3",
       "rect" : [0, 0, 0, 0],
       "lastMod" : "20210105T195352",
       "sourceTracks" : [

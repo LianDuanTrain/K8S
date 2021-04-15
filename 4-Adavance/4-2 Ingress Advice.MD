@@ -4,7 +4,7 @@
 ## Topics         
 - How to get Minikube Nginx Ingress Controller Configuration Detail?
 - Add Nginx Ingress Controller Customization Parameter
-- How to get Nginx Ingress Object configuration detail?
+- How to get Nginx Ingress Object configuration Detail?
 - Add Nginx Ingress Object Customization Parameter
 
 ### How to get Minikube Nginx Ingress Controller Configuration Detail?

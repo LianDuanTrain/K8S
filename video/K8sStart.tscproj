@@ -18,7 +18,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\lianduan\\Pictures\\wave1.png",
+      "src" : "D:\\Code\\K8S\\image\\wave1.png",
       "rect" : [0, 0, 1907, 383],
       "lastMod" : "20210105T163238",
       "sourceTracks" : [
@@ -41,7 +41,7 @@
     },
     {
       "id" : 2,
-      "src" : "C:\\Users\\lianduan\\Pictures\\wave2.png",
+      "src" : "D:\\Code\\K8S\\image\\wave2.png",
       "rect" : [0, 0, 1906, 341],
       "lastMod" : "20210105T163731",
       "sourceTracks" : [
@@ -64,7 +64,7 @@
     },
     {
       "id" : 3,
-      "src" : "C:\\Users\\lianduan\\Pictures\\wave3.png",
+      "src" : "D:\\Code\\K8S\\image\\wave3.png",
       "rect" : [0, 0, 1903, 380],
       "lastMod" : "20210105T163725",
       "sourceTracks" : [
@@ -87,9 +87,9 @@
     },
     {
       "id" : 4,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\infrastructure_components\\labeled\\control-plane-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\infrastructure_components\\labeled\\master-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -110,9 +110,9 @@
     },
     {
       "id" : 5,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\infrastructure_components\\labeled\\etcd-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\infrastructure_components\\labeled\\etcd-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -133,9 +133,9 @@
     },
     {
       "id" : 6,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\infrastructure_components\\labeled\\node-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\infrastructure_components\\labeled\\node-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -156,9 +156,9 @@
     },
     {
       "id" : 7,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\svc-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\svc-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -179,9 +179,9 @@
     },
     {
       "id" : 8,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\ns-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\ns-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -202,9 +202,9 @@
     },
     {
       "id" : 9,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\pod-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\pod-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -225,9 +225,9 @@
     },
     {
       "id" : 10,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\secret-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\secret-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -248,9 +248,9 @@
     },
     {
       "id" : 11,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\rs-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\rs-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -271,9 +271,9 @@
     },
     {
       "id" : 12,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\vol-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\vol-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -294,9 +294,9 @@
     },
     {
       "id" : 13,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\deploy-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\deploy-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -317,9 +317,9 @@
     },
     {
       "id" : 14,
-      "src" : "C:\\Users\\lianduan\\Downloads\\community-master\\icons\\png\\resources\\labeled\\cronjob-128.png",
+      "src" : "D:\\Code\\K8S\\image\\community-master\\icons\\png\\resources\\labeled\\cronjob-128.png",
       "rect" : [0, 0, 128, 128],
-      "lastMod" : "20201224T160827",
+      "lastMod" : "20210401T080121",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -340,7 +340,7 @@
     },
     {
       "id" : 15,
-      "src" : "C:\\Users\\lianduan\\Pictures\\k8sfavicon.png",
+      "src" : "D:\\Code\\K8S\\image\\k8sfavicon.png",
       "rect" : [0, 0, 512, 512],
       "lastMod" : "20210105T165021",
       "sourceTracks" : [
@@ -363,7 +363,7 @@
     },
     {
       "id" : 16,
-      "src" : "C:\\Users\\lianduan\\Videos\\4K Video Downloader\\wave.mp3",
+      "src" : "D:\\Code\\K8S\\image\\wave.mp3",
       "rect" : [0, 0, 0, 0],
       "lastMod" : "20210105T195352",
       "sourceTracks" : [
@@ -405,13 +405,13 @@
                       "kind" : "remix",
                       "shape" : "text",
                       "style" : "basic",
-                      "height" : 250.0,
+                      "height" : 474.0,
                       "line-spacing" : 0.0,
-                      "width" : 998.63013698628,
+                      "width" : 1893.40273972599,
                       "word-wrap" : 1.0,
                       "horizontal-alignment" : "center",
                       "resize-behavior" : "resizeText",
-                      "text" : "Run Your First Docker",
+                      "text" : "Kubernetes  Docker",
                       "vertical-alignment" : "center",
                       "font" : {
                         "color-blue" : 1.0,
@@ -428,7 +428,7 @@
                           {
                             "endTime" : 0,
                             "time" : 0,
-                            "value" : [{"name":"fontItalic","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":21,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":21,"rangeStart":0,"value":700,"valueType":"int"},{"name":"kerning","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":21,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"underline","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":21,"rangeStart":0,"value":96,"valueType":"double"},{"name":"strikethrough","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"}],
+                            "value" : [{"name":"fontItalic","rangeEnd":18,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":18,"rangeStart":0,"value":700,"valueType":"int"},{"name":"underline","rangeEnd":18,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":18,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":18,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":18,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":18,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":18,"rangeStart":0,"value":165,"valueType":"double"}],
                             "duration" : 0
                           }
                         ]
@@ -550,13 +550,13 @@
                       "kind" : "remix",
                       "shape" : "text",
                       "style" : "basic",
-                      "height" : 250.0,
+                      "height" : 402.0,
                       "line-spacing" : 0.0,
-                      "width" : 998.63013698628,
+                      "width" : 1605.79726027394,
                       "word-wrap" : 1.0,
                       "horizontal-alignment" : "center",
                       "resize-behavior" : "resizeText",
-                      "text" : "Run Your First Docker",
+                      "text" : "Kubernetes Docker",
                       "vertical-alignment" : "center",
                       "font" : {
                         "color-blue" : 1.0,
@@ -573,7 +573,7 @@
                           {
                             "endTime" : 0,
                             "time" : 0,
-                            "value" : [{"name":"strikethrough","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":21,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":21,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fontWeight","rangeEnd":21,"rangeStart":0,"value":700,"valueType":"int"},{"name":"fgColor","rangeEnd":21,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"underline","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":21,"rangeStart":0,"value":0,"valueType":"int"}],
+                            "value" : [{"name":"fontSize","rangeEnd":17,"rangeStart":0,"value":165,"valueType":"double"},{"name":"fontWeight","rangeEnd":17,"rangeStart":0,"value":700,"valueType":"int"},{"name":"strikethrough","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":17,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fgColor","rangeEnd":17,"rangeStart":0,"value":"(50,108,229,255)","valueType":"color"},{"name":"fontItalic","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"double"}],
                             "duration" : 0
                           }
                         ]
@@ -583,7 +583,7 @@
                       "autoRotateText" : true
                     },
                     "parameters" : {
-                      "translation0" : -74.4178082188969,
+                      "translation0" : -22.4,
                       "translation1" : 4.13429290734252e-11
                     },
                     "effects" : [
@@ -1840,7 +1840,7 @@
                                             "trackNumber" : 0,
                                             "trimStartSum" : 0,
                                             "attributes" : {
-                                              "ident" : "control-plane-128"
+                                              "ident" : "master-128"
                                             },
                                             "parameters" : {
                                               "translation0" : -785.119501466663,
@@ -2553,7 +2553,7 @@
     "backgroundColor" : [ 30, 30, 30, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\lianduan\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\K8sStart3581559.autosave.tscproj",
+    "AutoSaveFile" : "C:\\Users\\duanl\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\K8sStart790baea.autosave.tscproj",
     "CanvasZoom" : 50,
     "Date" : "2021-01-04 08:12:47 PM",
     "Fit" : 0,

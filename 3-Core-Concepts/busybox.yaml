@@ -1,0 +1,38 @@
+
+# API Version  
+apiVersion: apps/v1
+kind: Deployment
+# Deployment metadata start
+metadata:
+  name: busybox-deployment
+  labels:
+    app: busybox
+# Deployment metadata end
+# Pod spec start    
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: busybox
+# Pod spec end       
+# template start      
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:  
+        - name: busybox
+          image: busybox       
+          volumeMounts: 
+          - name: config
+            mountPath: "/config"
+          command: ["/bin/sh", "-ec", "sleep 1000"]  
+      volumes:
+        - name: config
+          configMap:
+            name: client-service
+            items:
+            - key: "application.properties"
+              path: "application.properties"
+# template end

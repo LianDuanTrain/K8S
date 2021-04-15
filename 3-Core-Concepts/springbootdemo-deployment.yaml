@@ -1,0 +1,28 @@
+# API Version  
+apiVersion: apps/v1
+kind: Deployment
+# Deployment metadata start
+metadata:
+  name: springbootdemo-deployment
+  labels:
+    app: springbootdemo
+# Deployment metadata end
+# Pod spec start    
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springbootdemo
+# Pod spec end       
+# template start      
+  template:
+    metadata:
+      labels:
+        app: springbootdemo
+    spec:
+      containers:
+      - name: springbootdemo
+        image: lianduantraining/springbootdemo:v1
+        ports:
+        - containerPort: 9999
+# template end 
