@@ -3,8 +3,8 @@
 ## Topics
 - What is Blue/Green Deployment?
 - Demo  
-  - Create a Blue Deployment
-  - Create a Green Deployment
+  - Create Blue Deployment and Ingress
+  - Create Green Deployment and Ingress
   - Switch network traffic from Blue to Green
 
 ## What is Blue/Green Deployment?
@@ -15,10 +15,10 @@ he “Green” version is the new version.
 
 
 ## Demo  
-<image src ="greenblue.gif">  
+<image src ="greenblue.gif" width="70%">  
 
 ### Create a Blue Deployment
-www.springbootdemo.com => springbootdemo-v1 service  
+#### www.springbootdemo.com => springbootdemo-v1 service  
 - `minikube addons enable ingress`  
 - `minikube ip`  
 - ```
@@ -31,23 +31,22 @@ www.springbootdemo.com => springbootdemo-v1 service
   - metadata => version: v1
 - Service
   - selector => version: v1
-- Ingress
-  - service => name: springbootdemo-v1     
 
 - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/springboot-demo-service-blue-v1.yaml`  
 
-- Test Service
+#### Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
   - `curl www.springbootdemo-v1`
 
-  
-#### Test
+### Create a Blue Ingress
+  - service => name: springbootdemo-v1  
+  - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/blue-ingress-demo.yaml`    
+#### Test Blue Ingress
   - curl www.springbootdemo.com
   - curl www.springbootdemo.com/sys|jq
 
 ### Create a Green Deployment
-test.springbootdemo.com => springbootdemo-v2 service  
-- `minikube addons enable ingress`  
+#### test.springbootdemo.com => springbootdemo-v2 service   
 - `minikube ip`  
 - ```
   sudo sh -c "echo '$(minikube ip) test.springbootdemo.com' >> /etc/hosts"
@@ -59,20 +58,22 @@ test.springbootdemo.com => springbootdemo-v2 service
   - metadata => version: v2
 - Service
   - selector => version: v2
-- Ingress
-  - service => name: springbootdemo-v2
+
   
 - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/springboot-demo-service-blue-v1.yaml`  
 
-- Test Service
+#### Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
   - `curl test.springbootdemo-v2`
-   
-#### Test URL
+
+### Create a Green Ingress
+  - service => name: springbootdemo-v2
+  - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/green-ingress-demo.yaml`   
+#### Test Green Ingress
   - curl test.springbootdemo.com
   - curl test.springbootdemo.com/sys|jq  
   
-### Switch network traffic from Blue to Green
+### Switch Network Traffic from Blue to Green
 
 - `kubectl patch ing/blue-ingress-demo --type=json -p='[{"op": "replace", "path": "/spec/rules/0/http/paths/0/backend/serviceName", "value":"springbootdemo-v2"}]' -n k8s-training` 
 - `kubectl delete ingress blue-ingress-demo -n k8s-training`     
