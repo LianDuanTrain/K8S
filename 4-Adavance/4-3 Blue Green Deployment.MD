@@ -31,13 +31,16 @@ www.springbootdemo.com => springbootdemo-v1 service
   - metadata => version: v1
 - Service
   - selector => version: v1
+- Ingress
+  - service => name: springbootdemo-v1     
+
+- `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/springboot-demo-service-blue-v1.yaml`  
 
 - Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
   - `curl www.springbootdemo-v1`
 
-- Ingress
-  - service => name: springbootdemo-v1   
+  
 #### Test
   - curl www.springbootdemo.com
   - curl www.springbootdemo.com/sys|jq
@@ -56,17 +59,21 @@ test.springbootdemo.com => springbootdemo-v2 service
   - metadata => version: v2
 - Service
   - selector => version: v2
+- Ingress
+  - service => name: springbootdemo-v2
+  
+- `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/springboot-demo-service-blue-v1.yaml`  
+
 - Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
   - `curl test.springbootdemo-v2`
-
-- Ingress
-  - service => name: springbootdemo-v2   
+   
 #### Test URL
   - curl test.springbootdemo.com
   - curl test.springbootdemo.com/sys|jq  
   
 ### Switch network traffic from Blue to Green
 
-- `kubectl patch ing/ingress-demo --type=json -p='[{"op": "replace", "path": "/spec/rules/0/http/paths/0/backend/serviceName", "value":"springbootdemo-v2"}]' -n k8s-training`   
+- `kubectl patch ing/blue-ingress-demo --type=json -p='[{"op": "replace", "path": "/spec/rules/0/http/paths/0/backend/serviceName", "value":"springbootdemo-v2"}]' -n k8s-training` 
+- `kubectl delete ingress blue-ingress-demo -n k8s-training`     
 
