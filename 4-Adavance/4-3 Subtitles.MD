@@ -17,25 +17,25 @@ Kubernetes has a really awesome built-in feature called Deployments. Deployments
 However, there are many legacy applications out there that don't work well with rolling updates. Some applications simply need to deploy a new version and cut over to it right away. For this, we need to perform a blue/green deployment. With blue/green deployments a new copy of the application (green) is deployed alongside the existing version (blue). Then the ingress/router to the app is updated to switch to the new version (green). You then need to wait for the old (blue) version to finish the requests sent to it, but for the most part traffic to the app changes to the new version all at once.
 
 
-
-## What is Blue/Green Deployment?
-- A Blue/Green deployment is a way of accomplishing a zero-downtime upgrade to an - existing application. 
-- The “Blue” version is the currently running copy of the application T
-he “Green” version is the new version. 
-- Once the green version is ready, traffic is rerouted to the new version.
-
-
 ## Demo  
 <image src ="greenblue.gif" width="70%">  
+The chart show my demo 3 steps
+1 Step, create a springbootdemo-v1 depylment resource and blue-ingress resource to redirect  www.springbootdemo.com => springbootdemo-v1 service.
+2 Step, create a springbootdemo-v2 depylment resource and green-ingress resource to redirect  test.springbootdemo.com => springbootdemo-v2 service.
+3 Step, update blue-ingress resource to redirect redirect  www.springbootdemo.com => springbootdemo-v2 service. and delete green-ingress resource.
 
+1 steps
+The gole is retirect  www.springbootdemo.com to springbootdemo-v1 service  
 ### Create a Blue Deployment
-#### www.springbootdemo.com => springbootdemo-v1 service  
+First add the minikube ip mapping  www.springbootdemo.com  in hosts file because www.springbootdemo.com is not real demo name.
 - `minikube addons enable ingress`  
 - `minikube ip`  
 - ```
   sudo sh -c "echo '$(minikube ip) www.springbootdemo.com' >> /etc/hosts"
   cat   /etc/hosts
   ```
+Before go though yaml, there is high lingh items. Add version: v1 in metadata for selector.
+
 - Deployment 
   - metadata => version: v1
 - Pod   
@@ -43,18 +43,26 @@ he “Green” version is the new version.
 - Service
   - selector => version: v1
 
+And then apply the yaml file to create depylment resource.
+
 - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/springboot-demo-service-blue-v1.yaml`  
 
-#### Test Service
+Lunch a busybox to test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
-  - `curl www.springbootdemo-v1`
+  - `curl springbootdemo-v1`
 
-### Create a Blue Ingress
+Next Create a Blue Ingress, go though yaml.
   - service => name: springbootdemo-v1  
   - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/blue-ingress-demo.yaml`    
-#### Test Blue Ingress
+
+Test Blue Deployment and Ingress
+
   - curl www.springbootdemo.com
   - curl www.springbootdemo.com/sys|jq
+
+springbootdemo upgrate to V2 so Green Deployment needs.
+The gole is retirect  test.springbootdemo.com to springbootdemo-v2 service  
+First add the minikube ip mapping  www.springbootdemo.com  in hosts file because test.springbootdemo.com is not real demo name same as www.springbootdemo.com 
 
 ### Create a Green Deployment
 #### test.springbootdemo.com => springbootdemo-v2 service   
@@ -63,6 +71,8 @@ he “Green” version is the new version.
   sudo sh -c "echo '$(minikube ip) test.springbootdemo.com' >> /etc/hosts"
   cat   /etc/hosts
   ```
+Before go though yaml, there is high lingh items. Add version: v2 in metadata for selector.
+
 - Deployment 
   - metadata => version: v2
 - Pod   
@@ -73,10 +83,13 @@ he “Green” version is the new version.
   
 - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/springboot-demo-service-blue-v1.yaml`  
 
+Lunch a busybox to test Service
 #### Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
-  - `curl test.springbootdemo-v2`
+  - `curl springbootdemo-v2`
 
+
+Test Blue Deployment and Ingress
 ### Create a Green Ingress
   - service => name: springbootdemo-v2
   - `kubectl apply -f https://github.com/LianDuanTrain/K8S/blob/main/4-Adavance/Blue%20Green%20Deployment%20Yaml/green-ingress-demo.yaml`   
@@ -84,6 +97,8 @@ he “Green” version is the new version.
   - curl test.springbootdemo.com
   - curl test.springbootdemo.com/sys|jq  
   
+After test springbootdemo-v2 complete, let me show how to switch netwotk trafic to 
+
 ### Switch Network Traffic from Blue to Green
 
 - `kubectl patch ing/blue-ingress-demo --type=json -p='[{"op": "replace", "path": "/spec/rules/0/http/paths/0/backend/serviceName", "value":"springbootdemo-v2"}]' -n k8s-training` 

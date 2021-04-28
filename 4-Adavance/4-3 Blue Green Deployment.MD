@@ -36,7 +36,7 @@ he “Green” version is the new version.
 
 #### Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
-  - `curl www.springbootdemo-v1`
+  - `curl springbootdemo-v1`
 
 ### Create a Blue Ingress
   - service => name: springbootdemo-v1  
@@ -64,7 +64,7 @@ he “Green” version is the new version.
 
 #### Test Service
   - `kubectl run  -it busybox --rm --image=yauritux/busybox-curl --restart=Never -n k8s-training -- sh -ls` 
-  - `curl test.springbootdemo-v2`
+  - `curl springbootdemo-v2`
 
 ### Create a Green Ingress
   - service => name: springbootdemo-v2
