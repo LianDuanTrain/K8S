@@ -8,22 +8,30 @@
 
 ## What is Blue/Green Deployment?
 - A Blue/Green deployment is a way of accomplishing a zero-downtime upgrade to an - existing application. 
-- The “Blue” version is the currently running copy of the application T
-he “Green” version is the new version. 
-- Once the green version is ready, traffic is rerouted to the new version.
+- The “Blue” version is the currently running application. In my demo is springbootdemo-v1 and access url is www.springbootdemo.com
+- The “Green” version is the new version. . In my demo is springbootdemo-v2 and access url is test.springbootdemo.com 
+- Once the green version is ready, read means QA and UAT test no issue , traffic is rerouted from “Blue” to “Green”.
 
-Kubernetes has a really awesome built-in feature called Deployments. Deployments come with the ability to do rolling updates of containers when you update your application to a new version. Rolling updates are a great way to update applications because your app uses about the same amount of resources during an update as it does when not updating, all with minimal impact to performance and availability.
+Kubernetes has a really awesome built-in feature called Deployments. Deployments come with the ability to do rolling updates of containers when you update your application to a new version. 
+Rolling updates are a great way to update applications because your app uses about the same amount of resources during an update, all with minimal impact to performance and availability.  
+Rolling updates do not need addtation resource when your app upgrate
 
-However, there are many legacy applications out there that don't work well with rolling updates. Some applications simply need to deploy a new version and cut over to it right away. For this, we need to perform a blue/green deployment. With blue/green deployments a new copy of the application (green) is deployed alongside the existing version (blue). Then the ingress/router to the app is updated to switch to the new version (green). You then need to wait for the old (blue) version to finish the requests sent to it, but for the most part traffic to the app changes to the new version all at once.
+However, there are many legacy applications  don't work well with rolling updates. 
+Some applications simply need to deploy a new version and cut over to it right away. 
+For this, we have to use  a blue/green deployment. With blue/green deployments a new copy of the application (green) is deployed alongside the existing version (blue)
 
+Then the ingress/router to the app is updated to switch to the new version (green).  then we need to wait for the old (blue) version to finish the requests sent to it, but for the most part traffic to the app changes to the new version all at once.
+
+https://martinfowler.com/bliki/BlueGreenDeployment.html
 
 ## Demo  
 <image src ="greenblue.gif" width="70%">  
-The chart show my demo 3 steps
+The chart shows my demo 3 steps
 1 Step, create a springbootdemo-v1 depylment resource and blue-ingress resource to redirect  www.springbootdemo.com => springbootdemo-v1 service.
 2 Step, create a springbootdemo-v2 depylment resource and green-ingress resource to redirect  test.springbootdemo.com => springbootdemo-v2 service.
-3 Step, update blue-ingress resource to redirect redirect  www.springbootdemo.com => springbootdemo-v2 service. and delete green-ingress resource.
+3 Step, update blue-ingress resource to redirect   www.springbootdemo.com => springbootdemo-v2 service. and delete green-ingress resource.
 
+Let start my demo
 1 steps
 The gole is retirect  www.springbootdemo.com to springbootdemo-v1 service  
 ### Create a Blue Deployment
