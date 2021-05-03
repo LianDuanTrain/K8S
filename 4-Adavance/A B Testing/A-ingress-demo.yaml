@@ -1,0 +1,27 @@
+# API Version
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  # Ingress Object Name 
+  name: a-ingress-testing
+  # Namespace 
+  namespace: k8s-training
+  annotations:
+      kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+   # Rule Host match  /etc/hosts
+   # host 80 443 
+    - host: www.springbootdemo.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            #Path types https://kubernetes.io/docs/concepts/services-networking/ingress/          
+            backend:
+              service:
+                name: springbootdemo-v1
+                port:
+                  number: 9999        
+
+
