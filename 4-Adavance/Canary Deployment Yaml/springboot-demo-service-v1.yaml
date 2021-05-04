@@ -1,0 +1,89 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: k8s-training
+  labels:
+    name: k8s-training
+---
+# Secrets
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: k8s-training
+  name: key-value-secret
+type: Opaque 
+data:
+# echo  'lian' | base64
+# echo  '123' | base64
+  username: bGlhbgo=
+  password: MTIzCg==
+---
+# Config Map
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: k8s-training
+  name: envconfig
+data:
+  author: lian 
+---
+# API Version  
+apiVersion: apps/v1
+kind: Deployment
+# Deployment metadata start
+metadata:
+  name: springbootdemo-deployment-v1
+  labels:
+    app: springbootdemo
+    version: v1
+  namespace: k8s-training  
+# Deployment metadata end
+# Pod spec start    
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springbootdemo-v1
+# Pod spec end       
+# template start      
+  template:
+    metadata:
+      namespace: k8s-training
+      labels:
+        app: springbootdemo-v1
+        version: v1
+    spec:
+      containers:
+      - name: springbootdemo-v1
+        image: lianduantraining/springbootdemo:v1
+        envFrom:
+          - configMapRef:
+              name: envconfig
+        env:
+            - name: SECRET_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: key-value-secret
+                  key: username
+            - name: SECRET_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: key-value-secret
+                  key: password            
+        ports:
+        - containerPort: 9999
+# template end 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springbootdemo-v1
+  namespace: k8s-training
+spec:
+  selector:
+    app: springbootdemo-v1
+    version: v1
+  ports:
+    - protocol: TCP
+      port: 9999
+      targetPort: 9999
