@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   # Ingress Object Name 
-  name: a-ingress-testing
+  name: base-ingress
   # Namespace 
   namespace: k8s-training
   annotations:
@@ -20,7 +20,7 @@ spec:
             #Path types https://kubernetes.io/docs/concepts/services-networking/ingress/          
             backend:
               service:
-                name: springbootdemo-v1
+                name: springbootdemo-service-v1
                 port:
                   number: 9999        
 
