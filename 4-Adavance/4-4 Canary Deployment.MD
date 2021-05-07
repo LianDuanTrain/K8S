@@ -27,14 +27,31 @@
   - Canary rules are evaluated in order of precedence
    - canary-by-header -> canary-by-cookie -> canary-weight
 # Demo 
+- `minikube addons enable ingress`  
+- `minikube ip`  
+- ```
+  sudo sh -c "echo '$(minikube ip) springbootdemo.com' >> /etc/hosts"
+  cat   /etc/hosts
+  ```  
+
 ## APPs
 ### V1 
-- Deployment
-  - springbootdemo-deployment-v1
-- Pod   
-  - springbootdemo-v1 
-- Service
-  - springbootdemo-service-v1
+- Go through YAML file
+- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/springboot-demo-service-v1.yaml`
+
+  - Deployment
+    - springbootdemo-deployment-v1
+  - Pod   
+    - springbootdemo-v1 
+  - Service
+    - springbootdemo-service-v1 
+- Check resource    
+  - `kubectl get all -n k8s-trainin`
+### Ingress
+- www.springbootdemo.com - > springbootdemo-service-v1 
+- Go through YAML file
+- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/base-ingress.yaml`
+-   - `kubectl describe ingress ingress-demo --namespace=k8s-training`
 ### V2 
 - Deployment
   - springbootdemo-deployment-v2
@@ -42,8 +59,7 @@
   - springbootdemo-v2  
 - Service
   - springbootdemo-service-v2 
-### Ingress
-- www.springbootdemo.com - > springbootdemo-service-v1 
+
 ## Weight Ingress
 nginx.ingress.kubernetes.io/canary: "true"
 nginx.ingress.kubernetes.io/canary-weight: "50"
