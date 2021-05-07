@@ -3,15 +3,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   # Ingress Object Name 
-  name: b-ingress-testing
+  name: canary-weight-ingress
   # Namespace 
   namespace: k8s-training
   annotations:
       kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/canary: "true"
-      #nginx.ingress.kubernetes.io/canary-weight: "50"
-      nginx.ingress.kubernetes.io/canary-by-header: "Region"
-      nginx.ingress.kubernetes.io/canary-by-header-pattern: "cd|sz"
+      nginx.ingress.kubernetes.io/canary-weight: "50"
 spec:
   rules:
    # Rule Host match  /etc/hosts
@@ -24,7 +22,7 @@ spec:
             #Path types https://kubernetes.io/docs/concepts/services-networking/ingress/          
             backend:
               service:
-                name: springbootdemo-v2
+                name: springbootdemo-service-v2
                 port:
                   number: 9999        
 

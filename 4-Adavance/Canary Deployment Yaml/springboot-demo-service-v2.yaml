@@ -48,7 +48,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springbootdemo-v2
+  name: springbootdemo-service-v2
   namespace: k8s-training
 spec:
   selector:
