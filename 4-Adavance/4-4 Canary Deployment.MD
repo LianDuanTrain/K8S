@@ -10,9 +10,9 @@
 # What is Canary Deployment?
 
 - App v1    
-<image src="Canary Deployment0.png" width="70%"/>  
+<image src="Canary Deployment0.png" width="50%"/>  
 - App v1 and App v2   
-<image src="Canary Deployment.png" width="70%"/>  
+<image src="Canary Deployment.png" width="50%"/>  
 
 - A canary deployment
 - Roll out new code to a subset of users as an initial test.  
@@ -50,9 +50,13 @@
 ### Ingress
 - www.springbootdemo.com - > springbootdemo-service-v1 
 - Go through YAML file
-- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/base-ingress.yaml`
--   - `kubectl describe ingress ingress-demo --namespace=k8s-training`
+- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/ingress-v1.yaml`
+- `kubectl describe ingress ingress-v1 --namespace=k8s-training`
+- `curl www.springbootdemo.com`   
 ### V2 
+- Go through YAML file
+- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/springboot-demo-service-v2.yaml`
+
 - Deployment
   - springbootdemo-deployment-v2
 - Pod   
@@ -61,9 +65,15 @@
   - springbootdemo-service-v2 
 
 ## Weight Ingress
-nginx.ingress.kubernetes.io/canary: "true"
-nginx.ingress.kubernetes.io/canary-weight: "50"
+- Go through YAML file
+- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/canary-weight-ingress.yaml`
+  - nginx.ingress.kubernetes.io/canary: "true"
+  - nginx.ingress.kubernetes.io/canary-weight: "50"
+- `curl www.springbootdemo.com`    
 ## Weight Ingress
-nginx.ingress.kubernetes.io/canary: "true"
-nginx.ingress.kubernetes.io/canary-by-header: "Region"
-nginx.ingress.kubernetes.io/canary-by-header-pattern: "VA|MD"
+- `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/canary-by-header-ingres.yaml`
+  - nginx.ingress.kubernetes.io/canary: "true"
+  - nginx.ingress.kubernetes.io/canary-by-header: "Region"
+  - nginx.ingress.kubernetes.io/canary-by-header-pattern: "VA|MD"
+- `curl www.springbootdemo.com`  
+
