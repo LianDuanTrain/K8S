@@ -1,13 +1,14 @@
 Subscribe to show your support! https://www.youtube.com/channel/UCLRZ8BoPZQoxshaoVj_Ykhg?sub_confirmation=1
 
 In today's video, we start a series on the advanced part of Kubernetes and Demo. 
-In this video, we cover Blue/Green Deployment 
+In this video, we cover Canary Deployment 
 
 Topics of this video
-    What is Blue/Green Deployment?
-    Demo - Create Blue Deployment and Ingress
-    Demo -  Create Green Deployment and Ingress
-    Demo -  Switch network traffic from Blue to Green
+    What is Canary Deployment?
+    How to implement Canary Deployment with Ingress?
+    Demo - Canary by header
+    Demo - Canary by weight
+
 
 To follow along, scan down below for the link to the GitHub repo.https://github.com/LianDuanTrain/K8S/tree/main/4-Adavance
 
