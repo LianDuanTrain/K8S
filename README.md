@@ -1,5 +1,5 @@
 # For K8S Training
-Play List  
+Play List:    
 Kubernetes Overview  
 https://www.youtube.com/watch?v=w4H_TeD7_cA&list=PLigGXNza3t_zM2782ohtGbgoaYGvIYdDw    
 Kubernetes Core Concepts and Demo   
