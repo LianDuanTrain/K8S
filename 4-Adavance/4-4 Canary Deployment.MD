@@ -70,7 +70,7 @@
   - nginx.ingress.kubernetes.io/canary: "true"
   - nginx.ingress.kubernetes.io/canary-weight: "50"
 - `curl www.springbootdemo.com`    
-## Weight Ingress
+## Header Ingress
 - `kubectl apply -f https://raw.githubusercontent.com/LianDuanTrain/K8S/main/4-Adavance/Canary%20Deployment%20Yaml/canary-by-header-ingres.yaml`
   - nginx.ingress.kubernetes.io/canary: "true"
   - nginx.ingress.kubernetes.io/canary-by-header: "Region"
